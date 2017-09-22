@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="container">
+      <app-phone-selector
+        [parent]="form"
+        [index]="i"
+        [phone]="phones[i]"
+        (added)="addPhoneToCart($event)"
+        *ngFor="let phone of phones; let i = index">
+      </app-phone-selector>
+  </div>
+  <app-cart
+    [parent]="form"
+    (remove)="removePhoneFromCart($event)">
+  </app-cart>
+</form>

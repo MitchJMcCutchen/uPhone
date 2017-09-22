@@ -1,0 +1,51 @@
+<md-card>
+  <h2>Billing Information</h2>
+  <div *ngIf="parent" [formGroup]="parent">
+    <div class="form-container" formGroupName="billing">
+      <md-input-container>
+        <input
+          type="text"
+          mdInput
+          placeholder="Full Name"
+          formControlName="fullName"/>
+      </md-input-container>
+      <md-input-container>
+        <input
+          type="text"
+          mdInput
+          placeholder="Email"
+          formControlName="email"/>
+      </md-input-container>
+      <md-input-container>
+        <input
+          type="text"
+          mdInput
+          placeholder="Address"
+          formControlName="address"/>
+      </md-input-container>
+      <div class="container">
+        <md-input-container>
+          <input
+            type="text"
+            mdInput
+            placeholder="City"
+            formControlName="city"/>
+        </md-input-container>
+        <md-input-container>
+          <input
+            type="text"
+            mdInput
+            placeholder="State"
+            formControlName="state"/>
+        </md-input-container>
+        <md-input-container>
+          <input
+            type="text"
+            mdInput
+            placeholder="Zip"
+            formControlName="zip"/>
+        </md-input-container>
+      </div>
+    </div>
+  </div>
+</md-card>

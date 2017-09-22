@@ -1,0 +1,17 @@
+@import "../../../../styles";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin: em(36) auto;
+  width: $desktop-res;
+  .cart {
+    md-card {
+      display: flex;
+      justify-content: space-between;
+      margin: em(24) 0;
+      width: em(500);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../../../styles";
+
+.phone-card {
+  .phone-img {
+    width: em(300);
+  }
+  .title {
+    font-size: em(18);
+  }
+  button {
+    margin: em(24) 0 em(18);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+p {
+  font-size: em(8);
+}

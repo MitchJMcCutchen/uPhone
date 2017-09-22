@@ -1,0 +1,27 @@
+<md-card class="container" *ngIf="phones.length">
+  <div class="cart">
+    <h1>Cart</h1>
+    <div *ngFor="let phone of phones; let i = index;">
+      <md-card>
+        <div class="cart-item">
+          <h2>uPhone {{ phone.name }}</h2>
+          <h3>Quantity: {{ phone.quantity }}</h3>
+        </div>
+        <div>
+          <h3>{{ phone.price * phone.quantity | currency:"USD":true }}</h3>
+          <button md-button color="warn" (click)="onRemove(i)">REMOVE</button>
+        </div>
+      </md-card>
+    </div>
+  </div>
+
+
+  <div class="total" [formGroup]="parent">
+    <h1>Subtotal: {{ subtotal | currency:'USD':true }}</h1>
+    <p *ngIf="discount">- 10% discount</p>
+    <p *ngIf="shipping">+ $100 fragile shipping</p>
+
+    <h1>Total: {{ total | currency:'USD':true }}</h1>
+    <button type="submit" color="primary" md-raised-button>CHECKOUT</button>
+  </div>
+</md-card>

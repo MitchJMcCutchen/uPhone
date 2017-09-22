@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+//Variables
+
+$hd-res: 1800px;
+$desktop-res: 1000px;
+$tablet-res: 640px;
+
+//Functions
+
+//Returns em value based on pixel input
+@function em($pixels) {
+  @return #{$pixels/16}rem;
+}
+
+//Base Styles
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+p, h1, h2, h3 {
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}

@@ -1,0 +1,10 @@
+<h1>Order Submitted</h1>
+<div>
+  <h2>Order Details</h2>
+  <div class="container">
+    <md-card *ngFor="let item of cart">
+      <h2>uPhone {{ item.name | uppercase }}</h2>
+      <p>Quantity: {{ item.quantity }}</p>
+    </md-card>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+@import "../../../styles";
+
+.intro {
+  h1, h2, p {
+    text-align: center;
+  }
+  .hero {
+    margin: em(250) 0 em(200);
+    font-size: em(67);
+  }
+  .content {
+    margin: em(100) 0 0;
+    font-size: em(36);
+  }
+  img {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: $desktop-res;
+  }
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: $desktop-res;
+}

@@ -1,0 +1,30 @@
+<md-card class="phone-card">
+  <img md-card-image class="phone-img" [src]="phone?.img"/>
+  <md-card-header>
+    <md-card-title class="title">uPhone {{ phone?.name | uppercase }}</md-card-title>
+    <md-card-subtitle>{{ phone?.price | currency:'USD':true }}
+      <span *ngIf="phone?.id === 3">*</span>
+    </md-card-subtitle>
+  </md-card-header>
+  <div *ngIf="parent" [formGroup]="parent">
+    <div formGroupName="selector">
+      <div [formGroupName]="index">
+        <md-input-container>
+          <input
+            type="number"
+            #test
+            mdInput
+            formControlName="quantity"
+            [max]="max"
+            min="0"
+            placeholder="Quantity">
+          <md-hint align="start">Limit 6 uPhones per order</md-hint>
+          <md-hint align="end">{{ max }} / 6</md-hint>
+          <md-error>You must enter {{ max }} or less</md-error>
+        </md-input-container>
+        </div>
+    </div>
+    <button type="button" [disabled]="overMax || test.value < 1" md-raised-button (click)="addPhone()">Add to Cart</button>
+  </div>
+</md-card>
+<p *ngIf="phone?.id === 3">*A flat-rate of $100 will be charged for shipping</p>

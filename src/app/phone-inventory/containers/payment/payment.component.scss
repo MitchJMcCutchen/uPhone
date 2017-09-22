@@ -1,0 +1,17 @@
+@import "../../../../styles";
+
+md-card {
+  margin: auto;
+  width: $desktop-res;
+  h1 {
+    text-align: center;
+  }
+  form {
+    display: flex;
+    justify-content: space-around;
+    button {
+      margin: em(50) 0 0;
+      width: 100%;
+    }
+  }
+}

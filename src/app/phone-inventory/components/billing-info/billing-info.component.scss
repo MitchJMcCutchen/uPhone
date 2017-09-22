@@ -1,0 +1,19 @@
+@import "../../../../styles";
+
+md-card {
+  width: em(400);
+}
+.form-container {
+  width: em(350);
+  md-input-container {
+    width: 100%;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    md-input-container {
+      width: 30%;
+    }
+  }
+}

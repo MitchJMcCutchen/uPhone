@@ -1,0 +1,15 @@
+<md-card>
+  <h1 *ngIf="totals?.amount">Total: {{ totals.amount | currency:"USD":true }}</h1>
+  <form *ngIf="!sent" [formGroup]="paymentForm" (submit)="onSubmit()">
+    <app-billing-info
+      [parent]="paymentForm">
+    </app-billing-info>
+    <div>
+      <app-credit-card
+        [parent]="paymentForm">
+      </app-credit-card>
+      <button type="submit" [disabled]="paymentForm.invalid" md-raised-button color="primary">PURCHASE</button>
+    </div>
+  </form>
+  <app-confirmation *ngIf="sent"></app-confirmation>
+</md-card>

@@ -1,0 +1,32 @@
+<md-card>
+  <h2>Credit Card</h2>
+  <div *ngIf="parent" [formGroup]="parent">
+    <div class="form-container" formGroupName="creditCard">
+      <md-input-container>
+        <input
+          type="text"
+          appCreditCard
+          mdInput
+          placeholder="Card Number"
+          formControlName="cardNumber"/>
+      </md-input-container>
+      <div class="container">
+        <md-input-container>
+          <input
+            type="text"
+            mdInput
+            appExpDate
+            placeholder="Exp"
+            formControlName="expiration"/>
+        </md-input-container>
+        <md-input-container>
+          <input
+            type="text"
+            mdInput
+            placeholder="CCV"
+            formControlName="ccv"/>
+        </md-input-container>
+      </div>
+    </div>
+  </div>
+</md-card>

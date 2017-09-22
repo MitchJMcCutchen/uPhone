@@ -1,0 +1,8 @@
+@import "../../../../styles";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: $desktop-res;
+}

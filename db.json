@@ -1,0 +1,22 @@
+{
+  "phones": [
+    {
+      "id": 1,
+      "price": 800,
+      "name": "Mini",
+      "img": "/assets/imgs/banana_mini.png"
+    },
+    {
+      "id": 2,
+      "price": 1100,
+      "name": "XL",
+      "img": "/assets/imgs/banana_xl.png"
+    },
+    {
+      "id": 3,
+      "price": 2100,
+      "name": "Glass",
+      "img": "/assets/imgs/banana_glass.png"
+    }
+  ]
+}
