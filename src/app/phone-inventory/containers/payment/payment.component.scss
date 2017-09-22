@@ -15,3 +15,22 @@ md-card {
     }
   }
 }
+
+@media only screen and (max-width: $desktop-res) {
+  md-card {
+    width: $tablet-res;
+    form {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      div {
+        margin: em(20) 0 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-res) {
+  md-card {
+    width: em(320);
+  }
+}

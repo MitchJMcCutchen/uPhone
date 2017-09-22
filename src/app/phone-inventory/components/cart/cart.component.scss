@@ -10,8 +10,27 @@
     md-card {
       display: flex;
       justify-content: space-between;
+      align-content: baseline;
       margin: em(24) 0;
       width: em(500);
+    }
+  }
+}
+
+@media only screen and (max-width: $desktop-res) {
+  .container {
+    flex-wrap: wrap;
+    width: $tablet-res;
+  }
+}
+
+@media only screen and (max-width: $tablet-res) {
+  .container {
+    width: em(320);
+    .cart {
+      md-card {
+        width: 100%;
+      }
     }
   }
 }

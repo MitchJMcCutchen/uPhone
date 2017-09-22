@@ -24,3 +24,26 @@
   margin: auto;
   width: $desktop-res;
 }
+
+@media only screen and (max-width: $desktop-res) {
+  .intro {
+    .hero {
+      font-size: em(50);
+    }
+    .header-img {
+      width: 100%;
+    }
+  }
+  .container {
+    width: $tablet-res;
+  }
+}
+
+@media only screen and (max-width: $tablet-res) {
+  .intro {
+    .container {
+      width: em(320);
+      flex-wrap: wrap;
+    }
+  }
+}

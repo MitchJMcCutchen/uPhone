@@ -6,3 +6,20 @@
   margin: auto;
   width: $desktop-res;
 }
+
+@media only screen and (max-width: $desktop-res) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: $tablet-res;
+    app-phone-selector {
+      margin-top: em(20);
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-res) {
+  .container {
+    width: em(320);
+  }
+}

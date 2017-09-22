@@ -17,3 +17,12 @@ md-card {
     }
   }
 }
+
+@media only screen and (max-width: $tablet-res) {
+  md-card {
+    width: em(300);
+  }
+  .form-container {
+    width: em(275);
+  }
+}
