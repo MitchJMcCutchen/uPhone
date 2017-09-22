@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 
 import { PaymentService } from '../../services/payment.service';
 import { PhoneStockService } from '../../services/phone-stock.service';
-import { StockValidators } from './phone-stock.validator';
 
 import { Phone } from '../../models/phone.interface';
 
